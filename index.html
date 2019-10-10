@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MHS Comp Sci</title>
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>MHS Advanced CS</h1>
+		</div>
+
+		<!--
+		Template for new elements
+				<div class="title">
+					<h1>Title</h1>
+				</div>
+				<div class="info">
+					<b>Header</b><br><br>
+					<p class="text">Text</p><span id="dots-unit">...</span>
+					<span class="more" id="more-unit">test</span>
+					<i id="moreBtn-unit" onclick="readMore('unit')">[Read More]</i>
+				</div>
+		-->
+		
+		<div class="content">
+			<div class="main">
+				<div class="title">
+					<h1>Big O Notation</h1>
+				</div>
+				<div class="info">
+					<span class="text">Big O Notation is used</span><span id="dots-bigO">...</span>
+					<span class="more" id="more-bigO"> in computer science to describes the execution time as well as the storage space a function will take. It is written as O(n) with n describing the efficiency of the function.</span>
+					<i id="moreBtn-bigO" onclick="readMore('bigO')">[Read More]</i>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sidebar" onclick="toggleSidebar()">
+			<div class="toggle-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Labs</a></li>
+			</ul>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

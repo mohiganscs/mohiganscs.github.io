@@ -1,7 +1,7 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	font-family: "Noto Sans";
+	font-family: 'Open Sans', sans-serif;
 }
 
 .content {
@@ -14,11 +14,13 @@
 .header {
 	position: sticky;
 	top: 10px;
-	padding: 35px 0;
+	padding: 30px 0;
 	background: blue;
+	color: white;
 	box-shadow: 0 5px 20px 5px #ccc;
 	text-align: center;
-	font-size: 24px;
+	font-size: 28px;
+	font-weight: 900;
 }
 
 .info {
@@ -39,7 +41,8 @@
 
 .main {
 	position: absolute;
-	left: 130px;
+	left: 50%;
+	transform: translate(-50%, 0%);
 }
 
 .more {
@@ -80,7 +83,7 @@
 .sidebar .toggle-btn {
 	position: absolute;
 	left: 230px;
-	top: 45px;
+	top: 50px;
 }
 
 .sidebar .toggle-btn:hover {
@@ -91,7 +94,11 @@
 	display: block;
 	width: 30px;
 	height: 5px;
-	background: #151719;
+	background: white;
 	margin: 5px 0px;
 	border-radius: 10px;
+}
+
+.title {
+	text-align: center;
 }

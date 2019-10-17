@@ -59,6 +59,7 @@
 			const SEMI_COLON_KEY = 186;
 			const OPEN_PARENTHESES = 57;
 			const CLOSED_PARENTHESES = 48;
+			const PERIOD = 190;
 			const SHIFT = 16;
 
 			var shifted = false;
@@ -76,9 +77,11 @@
 						initialCode.value += " &nbsp;&nbsp; ";
 						break;
 					case SEMI_COLON_KEY:
-						e.preventDefault();
-						initialCode.value += " ; ";
-						break;
+						if(!shifted) {
+							e.preventDefault();
+							initialCode.value += " ; ";
+							break;
+						}
 					case OPEN_PARENTHESES:
 						if(shifted) {
 							e.preventDefault();
@@ -89,6 +92,12 @@
 						e.preventDefault();
 						initialCode.value += " ;; ";
 						break;
+					case PERIOD:
+						if(!shifted) {
+							e.preventDefault();
+							initialCode.value += ". ";
+							break;
+						}
 				}
 				
 				translateCode();
@@ -198,10 +207,22 @@
 
 				if(str.indexOf(")") >= 0) {
 					var pos = str.indexOf(")");
-					finalCode.value += opener + str.substring(0, pos) + "</span><span class='bld'>) </span>";
+
+					if(str.indexOf(") ;") >= 0) {
+						finalCode.value += opener + str.substring(0, pos) + "</span><span class='bld'>); </span>";
+						return true;
+					} else {
+						finalCode.value += opener + str.substring(0, pos) + "</span><span class='bld'>)</span>";
+						return true;
+					}
+				}
+
+				if(str.indexOf(".") >= 0) {
+					var pos = str.indexOf(".");
+					finalCode.value += "<span class='dtd'>" + str.substring(0, pos) + "</span><span class='bld'>.</span>";
 					return true;
 				}
-		
+			
 				return false;
 			}
 

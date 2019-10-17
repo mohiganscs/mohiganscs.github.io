@@ -26,6 +26,10 @@
 	background: rgb(240, 240, 240);
 }
 
+.dtd {
+	color: rgb(1, 128, 128);
+}
+
 .nmbr {
 	font-weight: normal;
 	color: rgb(1, 153, 153);

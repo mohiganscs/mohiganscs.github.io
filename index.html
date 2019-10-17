@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MHS Comp Sci</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>MHS Advanced CS</h1>
+		</div>
+
+		<!--
+		Template for new elements
+				<div class="title">
+					<h1>Title</h1>
+				</div>
+				<div class="info">
+					<b>Header</b><br><br>
+					<p class="text">Text</p><span id="dots-unit">...</span>
+					<span class="more" id="more-unit">test</span>
+					<i id="moreBtn-unit" onclick="readMore('unit')">[Read More]</i>
+				</div>
+		-->
+		
+		<div class="content">
+			<div class="main">
+				<div class="title">
+					<h1>Big O Notation</h1>
+				</div>
+				<div class="info">
+					<span class="text">
+					<h4>What is Big O Notation?</h4>
+					Big O Notation is used in computer science to describe
+					</span>
+					<span id="dots-bigO">...</span>
+					<span class="more" id="more-bigO">
+					the execution time as well as the storage space a function will take. It is written as O(n) with n describing the efficiency of the function.
+					<br><br>
+					<h4>Constant Time</h4>
+					Constant time is when a function takes a fixed time to run and the run time is independent from the value.
+					<script src="https://gist.github.com/mohiganscs/815302a0b639c56293d1043719af1f12.js"></script>
+					</span>
+					<i id="moreBtn-bigO" onclick="readMore('bigO')">[Read More]</i>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sidebar" onclick="toggleSidebar()">
+			<div class="toggle-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Labs</a></li>
+			</ul>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

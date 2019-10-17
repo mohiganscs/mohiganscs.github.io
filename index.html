@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MHS Comp Sci</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel='stylesheet' href='code.css'>
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>MHS Advanced CS</h1>
+		</div>
+
+		<!--
+		Template for new elements
+				<div class="title">
+					<h1>Exception Handling</h1>
+				</div>
+				<div class="info">
+					<span class="text">
+						<h4>What is Exception Handling?</h4>
+					</span>
+					<span id="dots-unit">...</span>
+					<span class="more" id="more-exHandle">test</span>
+					<p><i id="moreBtn-exHandle" onclick="readMore('exHandle')">[Read More]</i></p>
+				</div>
+		-->
+		
+		<div class="content">
+			<div class="main">
+				<div class="title">
+					<h1>Big O Notation</h1>
+				</div>
+				<div class="info">
+					<span class="text">
+						<h4>What is Big O Notation?</h4>
+						Big O Notation is used in computer science to describe
+					</span>
+					<span id="dots-bigO">...</span>
+					<span class="more" id="more-bigO">
+						the execution time as well as the storage space a function will take. It is written as O(n) with n describing the efficiency of the function.
+						<br><br>
+						<h4>Constant Time: O(1)</h4>
+						Constant time is when a function takes a fixed time to run and the run time is independent from the value.
+
+						<br><br>
+						<div><pre><code class='codeBlock'><div><span class=bld>public </span><span class=vr>int </span><span class=bld>returnNum(</span><span class=vr>int </span><span class=nrml>num</span><span class='bld'>) </span><span class=bld>{ </span><span class=nrml>  </span></div><div><span class=nmbr></span><span class=nrml>&nbsp;&nbsp; </span><span class=bld>return </span><span class=nrml>num </span><span class=nrml>* </span><span class=nrml>num </span><span class=nrml>+ </span><span class=nrml>nums; </span><span class=nmbr></span><span class=nrml>  </span></div><div><span class=bld>} </span></div></code></pre></div>
+						<br>
+
+						Constant time takes the same amount of time no matter what value is passed through the function. In Big O, it is written as O(1).
+						<br><br>
+						<h4>Linear Time: O(n)</h4>
+						Linear time indicates a function will execute <i>n</i> amount of times. The efficiency of a linear time function would be O(<i>n</i>).
+
+						<br><br>
+						<div><pre><code class='codeBlock'><div><span class=bld>public </span><span class=vr>int </span><span class=bld>returnNum(</span><span class=vr>int </span><span class=nrml>num</span><span class='bld'>) </span><span class=bld>{ </span><span class=nmbr></span><span class=nrml>  </span></div><div><span class=nrml>&nbsp;&nbsp; </span><span class=vr>int </span><span class=nrml>n </span><span class=nrml>= </span><span class=nmbr>0</span><span class=bld>; </span><span class=nrml>  </span></div><div><span class=nrml>&nbsp;&nbsp; </span><span class=bld>for(</span><span class=vr>int </span><span class=nrml>i </span><span class=nrml>= </span><span class=nmbr>0</span><span class=bld>; </span><span class=nmbr></span><span class=nrml>i </span><span class=nrml>< </span><span class=nrml>num </span><span class=bld>; </span><span class=nmbr></span><span class=nrml>i++</span><span class='bld'>) </span><span class=bld>{ </span><span class=nrml>  </span></div><div><span class=nmbr></span><span class=nrml>&nbsp;&nbsp; </span><span class=nmbr></span><span class=nrml>&nbsp;&nbsp; </span><span class=nmbr></span><span class=nmbr></span><span class=nrml>n </span><span class=nrml>+= </span><span class=nrml>i </span><span class=bld>; </span><span class=nmbr></span><span class=nrml>  </span></div><div><span class=nmbr></span><span class=nrml>&nbsp;&nbsp; </span><span class=bld>} </span><span class=nrml>  </span></div><div><span class=nmbr></span><span class=nrml>&nbsp;&nbsp; </span><span class=bld>return </span><span class=nrml>n </span><span class=bld>; </span><span class=nmbr></span><span class=nrml>  </span></div><div><span class=bld>} </span></div></code></pre></div>
+						<br>
+					</span>
+					<p><i id="moreBtn-bigO" onclick="readMore('bigO')">[Read More]</i></p>
+				</div>
+
+				<div class="title">
+					<h1>Exception Handling</h1>
+				</div>
+				<div class="info">
+					<span class="text">
+						<h4>What is Exception Handling?</h4>
+						One can handle exceptions through the use of try, catch
+					</span>
+					<span id="dots-exHandle">...</span>
+					<span class="more" id="more-exHandle"> 
+						and finally. For a
+					</span>
+					<p><i id="moreBtn-exHandle" onclick="readMore('exHandle')">[Read More]</i></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sidebar" onclick="toggleSidebar()">
+			<div class="toggle-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Blue Pelican Java</a></li>
+				<li><a href="#">Labs</a></li>
+				<li><a href="/BPJ-textbook.pdf/">About</a></li>
+			</ul>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,7 +1,18 @@
 * {
 	margin: 0px;
 	padding: 0px;
+}
+
+body {
 	font-family: 'Open Sans', sans-serif;
+}
+
+p > i {
+	font-size: 14px;
+}
+
+p > i:hover {
+	cursor: pointer;
 }
 
 .content {
@@ -27,7 +38,7 @@
 	position: relative;
 	top: 10px;
 	font-size: 17px;
-
+	margin-bottom: 30px;
 }
 
 .info > i {

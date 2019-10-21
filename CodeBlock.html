@@ -58,7 +58,7 @@
 			const SPACE = 32;
 			const SEMI_COLON_KEY = 186;
 			const OPEN_PARENTHESES = 57;
-			const CLOSED_PARENTHESES = 48;
+			const OPEN_SQUARE_BRACKET = 219;
 			const PERIOD = 190;
 			const SHIFT = 16;
 
@@ -86,6 +86,12 @@
 						if(shifted) {
 							e.preventDefault();
 							initialCode.value += "( ";
+						}
+						break;
+					case OPEN_SQUARE_BRACKET:
+						if(!shifted) {
+							e.preventDefault();
+							initialCode.value += "[ ";
 						}
 						break;
 					case ENTER_KEY:
@@ -138,11 +144,12 @@
 					case "byte":
 					case "char":
 					case "void":
+					case "import":
+					case "class":
 						str = "vr";
 						break;
 					case "public":
 					case "static":
-					case "class":
 					case "try":
 					case "catch":
 					case "finally":
@@ -220,6 +227,18 @@
 				if(str.indexOf(".") >= 0) {
 					var pos = str.indexOf(".");
 					finalCode.value += "<span class='dtd'>" + str.substring(0, pos) + "</span><span class='bld'>.</span>";
+					return true;
+				}
+				
+				if(str.indexOf("[") >= 0) {
+					var pos = str.indexOf("[");
+					finalCode.value += "<span class='vr'>" + str.substring(0, pos) + "</span><span class='bld'>[</span>";
+					return true;
+				}
+				
+				if(str.indexOf("]") >= 0) {
+					var pos = str.indexOf("]");
+					finalCode.value += opener + str.substring(0, pos) + "</span><span class='bld'>] </span>";
 					return true;
 				}
 			

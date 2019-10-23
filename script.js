@@ -1,5 +1,6 @@
 function toggleSidebar() {
 	document.getElementsByClassName('sidebar')[0].classList.toggle('active');
+	document.getElementsByClassName('toggle-btn')[0].classList.toggle('active');
 }
 
 function readMore(where) {

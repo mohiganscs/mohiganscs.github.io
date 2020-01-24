@@ -1,54 +1,183 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>MHS Advanced CS</title>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>MHS ADVANCED CS</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="https://kit.fontawesome.com/171fecdcc7.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="menu">
+      <div class="menu-left">
+        <div class="logo">
+          MHS ADVANCED CS
+        </div>
+        <div class="links">
+					<div class="link-arrow" onclick="toggleLinks()">
+						<i class="fas fa-angle-down"></i>
+					</div>
+					
+					<ul class="link-list">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Lessons</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#">Solutions</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+        </div>
+      </div>
+    </header>
 
-		<link rel="stylesheet" type="text/css" href="styles.css">
-	</head>
-	<body>
-		<div id="header">
-			<span id="header-txt">MHS Advanced CS</span>
-		</div>
+		<div class="container">
+			<div class="slider">
+				<div class="slides">
+					<input type="radio" name="r" id="r1" checked>
+					<input type="radio" name="r" id="r2">
+					<input type="radio" name="r" id="r3">
+					<input type="radio" name="r" id="r4">
+					<input type="radio" name="r" id="r5">
 
-		<div id="nav">
-			<a href="https://mohiganscs.github.io">Home</a>
-			<a href="https://mohiganscs.github.io/BPJ_textbook.pdf/">BPJ Textbook</a>
-			<a href="https://mohiganscs.github.io/labs/">Labs</a>
-			<a href="https://mohiganscs.github.io/solutions/">Solutions</a>
-			<a href="https://mohiganscs.github.io/about/">About</a>
-		</div>
+					<div class="slide s1">
+						<img src="/images/java.jpg">
+					</div>
+					<div class="slide">
+						<img src="/images/machinelearning.jpg">
+					</div>
+					<div class="slide">
+						<img src="/images/d&a.png">
+					</div>
+					<div class="slide">
+						<img src="/images/sql.png">
+					</div>
+					<div class="slide">
+						<img src="/images/gamedev.jpg">
+					</div>
 
-		<div id="main">
+				</div>
 
-		</div>
+				<div class="slider-nav">
+					<label for="r1" class="slider-bar" onclick="currentSlide=1;time=Date.now();"></label>
+					<label for="r2" class="slider-bar" onclick="currentSlide=2;time=Date.now();"></label>
+					<label for="r3" class="slider-bar" onclick="currentSlide=3;time=Date.now();"></label>
+					<label for="r4" class="slider-bar" onclick="currentSlide=4;time=Date.now();"></label>
+					<label for="r5" class="slider-bar" onclick="currentSlide=5;time=Date.now();"></label>
+				</div>
 
-		<div class="sidebar" onclick="toggleSidebar()">
-			<div class="toggle-btn">
-				<span></span>
-				<span></span>
-				<span></span>
 			</div>
-			<ul>
-				<li>Exceptions</li>
-				<li>Big O Notation</li>
-				<li>Input/Output</li>
-				<li>Sets and Maps</li>
-				<li>Linked Lists</li>
-				<li>Stacks and Queues</li>
-				<li>Trees</li>
-				<li>HashTable</li>
-				<li>Heaps and Priority Queues</li>
-				<li>Adjacency Lists and Adjacency Matrices</li>
-				<li>Game Project</li>
-				<li>Big Data Overview and Data Visualization</li>
-				<li>Relational Databases and Basic SQL</li>
-				<li>Advanced SQL</li>
-				<li>Machine Learning</li>
-				<li>Final Project</li>
-			</ul>
+
+			<div class="info">
+				<h1>Welcome!</h1>
+				<p class="msg">
+					Advanced Computer Science is taken at <a href="mohigans.mono.k12.wv.us">Morgantown High School</a> and after completing AP Computer Science A. During the first semester you will work with different data structures and practice writing your own classes. In the second semester, you will move on to some more difficult projects such as game development, machine learning, and SQL. There will be a final project at the end of each semester and they will challenge you into using the skills you've acquired while taking this course. The syllabus for the class is found below and other resources such as textbooks and solutions can be found on the site as well. Good luck!
+				</p>
+			</div>
+
+			<div class="syllabus">
+				<h1>Course Syllabus</h1>
+				<table>
+					<tr>
+						<td><strong>Week</strong></td>
+						<td><strong>Topic</strong></td>
+					</tr>
+
+					<tr>
+						<td>Week 1</td>
+						<td>Big O Notation</td>
+					</tr>
+
+					<tr>
+						<td>Week 2</td>
+						<td>Exceptions</td>
+					</tr>
+
+					<tr>
+						<td>Week 3</td>						
+						<td>Input/Output</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 4-5</td>
+						<td>Sets and Maps</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 6-7</td>
+						<td>Linked Lists</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 7-8</td>
+						<td>Stacks and Queues</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 9-10</td>
+						<td>Trees</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 11-12</td>
+						<td>HashTable</td>
+					</tr>
+
+					<tr>
+						<td>Week 13</td>
+						<td>Skip Lists</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 14-15</td>
+						<td>Heaps</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 16-17</td>
+						<td>Graphs</td>
+					</tr>
+
+					<tr>
+						<td>Christmas break</td>
+						<td>Semester 1 Project</td>
+					</tr>
+					<tr>
+						<td><strong>End of Semester 1</strong></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>Weeks 1-3</td>
+						<td>Game Dev</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 4-5</td>
+						<td>Big Data Overview and Data Visualization</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 6-9</td>
+						<td>Relational Databases and SQL</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 10-13</td>
+						<td>Machine Learning</td>
+					</tr>
+
+					<tr>
+						<td>Weeks 14-15</td>
+						<td>Semester 2 Project</td>
+					</tr>
+
+					<tr>
+						<td><strong>End of Semester 2</strong></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 
-		<script src="script.js"></script>
-	</body>
+    <script src="script.js"></script>
+  </body>
 </html>
